@@ -1,6 +1,11 @@
 import "firebase/compat/auth";
 import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {
+  getAuth,
+  onAuthStateChanged,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
 import { getDatabase, ref, set, get } from "firebase/database";
 
 const firebaseConfig = {
@@ -17,6 +22,15 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getDatabase(app);
+
+export const signInWithGoogle = async () => {
+  const provider = new GoogleAuthProvider();
+  try {
+    await signInWithPopup(auth, provider);
+  } catch (error) {
+    console.error(error.message);
+  }
+};
 
 export const onAuthStateChangedListener = () => {
   onAuthStateChanged(auth, (user) => {

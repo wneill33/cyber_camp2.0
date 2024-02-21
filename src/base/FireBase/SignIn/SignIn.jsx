@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./../Firebase";
+import { auth, signInWithGoogle } from "./../Firebase";
 import { useNavigate } from "react-router-dom";
 
 import "./signIn.css";
@@ -27,9 +27,15 @@ const SignIn = ({ setSelectedPage }) => {
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       handleSignIn();
     }
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle().then(() => {
+      navigate("/home");
+    });
   };
 
   return (
@@ -38,11 +44,7 @@ const SignIn = ({ setSelectedPage }) => {
       <div className="signInContainer">
         Email
         <div className="emailInputBoxWrapper">
-          <input
-            type="email"
-            onChange={handleEmailChange}
-            value={email}
-          />
+          <input type="email" onChange={handleEmailChange} value={email} />
         </div>
         <div className="passwordHeaderWrapper"> Password </div>
         <div className="passwordInputBoxWrapper">
@@ -54,8 +56,18 @@ const SignIn = ({ setSelectedPage }) => {
           />
         </div>
         <div className="buttonsWrapper">
-          <button className="signingInButtonWrapper" onClick={handleSignIn}>Sign In </button>
-          <button className="backButtonWrapper" onClick={() => setSelectedPage(null)}>Back </button>
+          <button className="signingInButtonWrapper" onClick={handleSignIn}>
+            Sign In{" "}
+          </button>
+          <button
+            className="backButtonWrapper"
+            onClick={() => setSelectedPage(null)}
+          >
+            Back{" "}
+          </button>
+          <button onClick={() => handleGoogleSignIn()}>
+            Sign In with Google
+          </button>
         </div>
       </div>
     </div>
