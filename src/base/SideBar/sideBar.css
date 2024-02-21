@@ -1,0 +1,41 @@
+.sideBarWrapperMain{
+    height: 100%;
+    width: 150%;
+    background-color: #161717;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: scroll;
+    font-family: Courier New, monospace;
+}
+.sideBarWrapperMain::-webkit-scrollbar{
+    display: none;
+}
+.sideBarStepWrapper{
+    display: flex;
+    flex-direction: column; 
+    background: radial-gradient(circle at center, #161717, #0e0d0d);
+    border: 2pt dashed #88C558;
+    border-radius: 15px;
+    width: fit-content; 
+    height: fit-content;
+    padding-bottom: 6%;
+    padding-right: 7%;
+    margin-top: 7%; 
+    margin-left: 9%;
+}
+.step{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    padding-left: 35px;
+    font-size: 140%;
+    color: #88C558;
+    margin-top: 18%;
+}
+.step:hover{
+    cursor: pointer;
+    font-weight: bold; 
+    filter: brightness(150%); 
+    font-size: 150%;
+}

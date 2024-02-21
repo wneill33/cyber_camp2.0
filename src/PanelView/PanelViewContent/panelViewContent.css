@@ -1,0 +1,66 @@
+.panelViewContentMainWrapper{
+    height: 80%;
+    margin-top: 1.5%;
+    width: 90%;
+    margin-left: 1.75%;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    color: white;
+    /* border: 2px solid blue; */
+    border-radius: 15px;
+}
+
+.panelViewStepsWrapper{
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid red; */
+    border-radius: 15px;
+}
+
+.panelViewContentPasswordMainWrapper{
+    height: 10%;
+    width: 100%;
+    /* border: 2px solid green; */
+    border-radius: 15px;
+
+}
+
+.inputBoxWrapper{
+    height: 50%;
+    width: 25%;
+    margin-top: 2%;
+    margin-left: -60%;
+}
+
+.button1 {
+    background: #89C559;
+    border: none;
+    height: 4vh;
+    width: 8vw;
+    border-radius: 15px;
+    font-family: Courier New, monospace;
+    font-weight: bold;
+    font-size: 100%;
+    margin-left: 2%;
+}
+
+.button1:hover {
+    filter: brightness(150%); 
+    cursor: pointer;
+}
+
+.testButtonWrapper {
+    height: 65%; 
+}
+
+.panelViewContainer {
+    display: flex;
+    height: 90%;
+    margin-top: 1.5%;
+    width: 95%;
+    margin-left: 2%;
+    border: 2pt dashed #88C558;
+    border-radius: 15px;
+    background: linear-gradient(to right, #0D100F, #8ac55959);
+}

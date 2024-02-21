@@ -1,0 +1,74 @@
+.signUpMainWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.signUpContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24vw;
+    height: 30vh;
+}
+
+.submitButtonWrapper {
+    margin-top: 4%;
+    background: #89C559;
+    border: none;
+    height: 4vh;
+    width: 12vw;
+    border-radius: 15px;
+    font-family: Courier New, monospace;
+    font-weight: bold;
+    font-size: 130%;
+}
+
+.submitButtonWrapper:hover {
+    filter: brightness(150%); 
+    cursor: pointer;
+}
+
+.backButtonSignUpWrapper {
+    margin-top: 4%;
+    background-color: #9CADA7;
+    border: none;
+    height: 4vh;
+    width: 12vw;
+    border-radius: 15px;
+    font-family: Courier New, monospace;
+    font-weight: bold;
+    font-size: 130%;
+}
+
+.backButtonSignUpWrapper:hover {
+    filter: brightness(150%); 
+    cursor: pointer;
+}
+
+.signUpHeaderWrapper {
+    font-size: 200%;
+}
+
+.signUpEmailInputWrapper input {
+    margin-top: 1%;
+    width: 15vw;
+    height: 3vh;
+    font-size: 17px;
+}
+
+.signUpPasswordInputWrapper input{
+    margin-top: 1%;
+    width: 15vw;
+    height: 3vh;
+    font-size: 17px;
+}
+
+.passwordInputHeader {
+    margin-top: 2%;
+    font-size: 130%;
+}
+
+.emailInputHeader {
+    font-size: 130%;
+    margin-top: -3%;
+}

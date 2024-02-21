@@ -1,0 +1,29 @@
+.navBarMainWrapper{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 94%;
+    width: 100%;
+    background: radial-gradient(circle at center, #161717, #0e0d0d);
+    font-size: 250%;
+    color: #88C558;
+    font-weight: bold;
+    font-size: 400%;
+    font-family: Courier New, monospace;
+    text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px  4px 0 #000, 4px  4px 0 #000; 
+    border: 2px dashed #88C558;
+    border-left: none;
+    border-right: none;
+}
+
+.navBarBigwrapper {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.signOutButtonWrapper:hover {
+    filter: brightness(150%);
+}

@@ -1,0 +1,32 @@
+.panelViewMainWrapper{
+    height: 100vh;
+    background-color: black;
+    width: 100vw;
+    
+}
+
+.panelViewNavBar{
+    height: 10%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.panelviewSideAndContentWrapper{
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+}
+
+.panelViewSideBar { 
+    height: 90vh;
+    width: 12vw;
+}
+
+.panelViewContent{
+    height: 90vh;
+    width: 88vw;
+    background: linear-gradient(to left, #0e0d0d, #161717);
+}
