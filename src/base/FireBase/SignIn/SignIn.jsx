@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth, signInWithGoogle } from "./../Firebase";
+import { auth, signInWithGoogle, signInWithGithub } from "./../Firebase";
 import { useNavigate } from "react-router-dom";
 
 import "./signIn.css";
@@ -25,17 +25,25 @@ const SignIn = ({ setSelectedPage }) => {
       })
       .catch((err) => alert(err.message));
   };
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then(() => {
+        navigate("/home");
+      })
+      .catch((err) => alert(err.message));
+  };
+  const handleGithubSignIn = () => {
+    signInWithGithub()
+      .then(() => {
+        navigate("/home");
+      })
+      .catch((err) => alert(err.message));
+  };
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       handleSignIn();
     }
-  };
-
-  const handleGoogleSignIn = () => {
-    signInWithGoogle().then(() => {
-      navigate("/home");
-    });
   };
 
   return (
@@ -67,6 +75,9 @@ const SignIn = ({ setSelectedPage }) => {
           </button>
           <button onClick={() => handleGoogleSignIn()}>
             Sign In with Google
+          </button>
+          <button onClick={() => handleGithubSignIn()}>
+            Sign In with Github
           </button>
         </div>
       </div>
