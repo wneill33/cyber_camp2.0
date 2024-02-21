@@ -1,10 +1,10 @@
-import "firebase/compat/auth";
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
   onAuthStateChanged,
   signInWithPopup,
   GoogleAuthProvider,
+  GithubAuthProvider,
 } from "firebase/auth";
 import { getDatabase, ref, set, get } from "firebase/database";
 
@@ -25,6 +25,14 @@ export const db = getDatabase(app);
 
 export const signInWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
+  try {
+    await signInWithPopup(auth, provider);
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+export const signInWithGithub = async () => {
+  const provider = new GithubAuthProvider();
   try {
     await signInWithPopup(auth, provider);
   } catch (error) {
