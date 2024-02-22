@@ -22,7 +22,8 @@ const LandingPage = () => {
         <h1>CYBER~CAMP</h1>
       </div>
       <div className="landingPageContent">
-        <div className="buttonsContentWrapper"> 
+        <div className={`buttonsContentWrapper ${ 
+          selectedPage === "SignIn" ? 'expanded' : selectedPage === "SignUp" ? 'shrink' : '' }`}> 
         {!selectedPage ? (
           <>
           <div className="signInButtonWrapper"> Already have an account? </div>
