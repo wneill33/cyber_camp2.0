@@ -2,31 +2,49 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./../Firebase";
 import "./signUp.css";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = ({ setSelectedPage }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [formErrors, setFormErrors] = useState({}); // New state for form errors
+  const [formErrors, setFormErrors] = useState({});
 
   const handleSignUp = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); // Ensure to prevent the default form submission behavior
 
+    // Reset form errors
     const errors = {};
     if (!email) errors.email = "Email is required";
     if (!password) errors.password = "Password is required";
     if (password && password.length < 6) errors.password = "Password must be at least 6 characters long";
-
     setFormErrors(errors);
 
     if (Object.keys(errors).length === 0) {
       createUserWithEmailAndPassword(auth, email, password)
         .then((creds) => {
-          alert("Your account was created successfully! Please sign in to continue.");
-          setSelectedPage("SignIn");
+          toast.success("Your account was created successfully! Please sign in to continue.", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          setSelectedPage("SignIn"); // Or use a different method to navigate
           console.log(creds);
         })
         .catch((error) => {
-          alert("Sign up not successful");
+          toast.error("Sign up not successful. Please try again.", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
           console.log("Sign Up Error", error);
         });
     }
@@ -63,6 +81,17 @@ const SignUp = ({ setSelectedPage }) => {
         <button type="submit" className="submitButtonWrapper">Submit</button>
         <button type="button" className="backButtonSignUpWrapper" onClick={() => setSelectedPage(null)}>Back</button>
       </form>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
