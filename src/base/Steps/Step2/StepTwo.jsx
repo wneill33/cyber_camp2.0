@@ -1,4 +1,5 @@
 import "./stepTwo.css";
+
 const StepTwo = () => {
   return (
     <div className="stepTwoMainWrapper">

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, signInWithGoogle, signInWithGithub } from "./../Firebase";
 import { useNavigate } from "react-router-dom";
+import { ReactComponent as Google } from "./Google.svg"; 
+import { ReactComponent as Github } from "./Github.svg"; 
 
 import "./signIn.css";
 
@@ -73,11 +75,13 @@ const SignIn = ({ setSelectedPage }) => {
           >
             Back{" "}
           </button>
-          <button onClick={() => handleGoogleSignIn()}>
-            Sign In with Google
-          </button>
-          <button onClick={() => handleGithubSignIn()}>
-            Sign In with Github
+          <button className="googleSignInButton" onClick={() => handleGoogleSignIn()}>
+            <Google className="googleButtonWrapper"/>
+            <span>Continue with Google</span>
+            </button>
+          <button className="githubSignInButton" onClick={() => handleGithubSignIn()}>
+            <Github className="githubButtonWrapper"/>
+            <span>Continue with GitHub</span>
           </button>
         </div>
       </div>

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .signInContainer {
     display: flex;
     flex-direction: column; 
@@ -17,7 +18,7 @@
 }
 
 .passwordHeaderwrapper {
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 .passwordInputBoxWrapper input {
@@ -69,4 +70,68 @@
 .signInHeaderWrapper {
     font-size: 200%;
     margin-bottom: 5%;
+}
+
+.googleButtonWrapper {
+    border: none;
+    height: 3vh;
+    width: 2vw;
+    border-radius: 15px;
+    font-family: Courier New, monospace;
+    font-weight: bold;
+    font-size: 90%;
+    margin-left: -5%;
+}
+
+.googleSignInButton {
+    height: 4vh;
+    width: 13vw;
+    margin-top: 5%;
+    font-family: Courier New, monospace;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c8d3cf; 
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 53%;
+    padding: 10px;
+}
+
+.googleSignInButton:hover {
+    filter: brightness(120%); 
+}
+
+.githubSignInButton {
+    height: 4vh;
+    width: 13vw;
+    margin-top: 5%;
+    font-family: Courier New, monospace;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c8d3cf; 
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 53%;
+    padding: 10px;
+}
+
+.githubSignInButton:hover {
+    filter: brightness(120%); 
+}
+
+.githubButtonWrapper {
+    border: none;
+    height: 3vh;
+    width: 2vw;
+    border-radius: 15px;
+    font-family: Courier New, monospace;
+    font-weight: bold;
+    font-size: 90%;
+    margin-left: -5%;
 }
