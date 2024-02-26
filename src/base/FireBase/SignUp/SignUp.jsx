@@ -11,9 +11,8 @@ const SignUp = ({ setSelectedPage }) => {
   const [formErrors, setFormErrors] = useState({});
 
   const handleSignUp = (e) => {
-    e.preventDefault(); // Ensure to prevent the default form submission behavior
+    e.preventDefault();
 
-    // Reset form errors
     const errors = {};
     if (!email) errors.email = "Email is required";
     if (!password) errors.password = "Password is required";
@@ -23,6 +22,7 @@ const SignUp = ({ setSelectedPage }) => {
     if (Object.keys(errors).length === 0) {
       createUserWithEmailAndPassword(auth, email, password)
         .then((creds) => {
+          console.log("User created successfully with credentials:", creds);
           toast.success("Your account was created successfully! Please sign in to continue.", {
             position: "top-center",
             autoClose: 5000,
@@ -36,7 +36,7 @@ const SignUp = ({ setSelectedPage }) => {
           console.log(creds);
         })
         .catch((error) => {
-          toast.error("Sign up not successful. Please try again.", {
+          toast.error("Sign up failed. Please try again.", {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,

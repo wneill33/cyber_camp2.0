@@ -79,7 +79,7 @@
 }
 
 .buttonsContentWrapper {
-    height: 40vh;
+    height: 35vh;
     width: 28vw; 
     background-color: #0d100fe5;
     border: none;
@@ -91,11 +91,11 @@
 }
 
 .buttonsContentWrapper.expanded {
-    height: 54vh;
+    height: 52vh;
     width: 28vw; 
 }
 
 .buttonsContentWrapper.shrink {
-    height: 40vh; 
+    height: 35vh; 
     width: 25vw; 
 }
