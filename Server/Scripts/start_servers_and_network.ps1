@@ -61,34 +61,34 @@ cd ..
 cd .\Scripts
 
 Write-Host "Running serverone container..."
-docker run -d --network cyber_camp_servers --name serverone -p 4000:1000 serverone
+docker run -d --network cyber_camp_servers --name serverone -p 4000:4000 serverone
 
 Write-Host "Running server Two container..."
-docker run -d --network cyber_camp_servers --name servertwo -p 4350:3450 servertwo
+docker run -d --network cyber_camp_servers --name servertwo -p 3450:3450 servertwo
 
 Write-Host "Running server Three container..."
-docker run -d --network cyber_camp_servers --name serverthree -p 4569:5555 serverthree
+docker run -d --network cyber_camp_servers --name serverthree -p 5555:5555 serverthree
 
 Write-Host "Running server Four container..."
-docker run -d --network cyber_camp_servers --name serverfour -p 8118:1334 serverfour
+docker run -d --network cyber_camp_servers --name serverfour -p 1334:1334 serverfour
 
 Write-Host "Running server Five container..."
-docker run -d --network cyber_camp_servers --name serverfive -p 5532:8850 serverfive
+docker run -d --network cyber_camp_servers --name serverfive -p 8850:8850 serverfive
 
 Write-Host "Running server Six container..."
-docker run -d --network cyber_camp_servers --name serversix -p 5543:6770 serversix
+docker run -d --network cyber_camp_servers --name serversix -p 6770:6770 serversix
 
 Write-Host "Running server Seven container..."
-docker run -d --network cyber_camp_servers --name serverseven -p 3500:6771 serverseven
+docker run -d --network cyber_camp_servers --name serverseven -p 6771:6771 serverseven
 
 Write-Host "Running server Eight container..."
-docker run -d --network cyber_camp_servers --name servereight -p 6473:3355 servereight
+docker run -d --network cyber_camp_servers --name servereight -p 3355:3355 servereight
 
 Write-Host "Running server Nine container..."
-docker run -d --network cyber_camp_servers --name servernine -p 4562:9999 servernine
+docker run -d --network cyber_camp_servers --name servernine -p 9999:9999 servernine
 
 Write-Host "Running server Ten container..."
-docker run -d --network cyber_camp_servers --name serverten -p 8117:1111 serverten
+docker run -d --network cyber_camp_servers --name serverten -p 1111:1111 serverten
 
 Write-Host "******************** On docker network cyber_camp_servers******************************"
 Write-Host "***************************************************************************************"
