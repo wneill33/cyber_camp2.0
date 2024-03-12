@@ -3,12 +3,19 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    color: white;  
+    /* color: white;   */
     font-family: Courier New, monospace;
     color: #88C558;
 }
 
-.serverContentsInstructionsWrapper {
-    display: flex;
-    flex-direction: row;
+.stepZeroone{
+    margin-top: 1%;
+    font-size: 135%;
+    font-weight: bolder;
+}
+
+.stepZerotwo{
+    margin-top: 3%;
+    font-size: 150%;
+    font-weight: bolder;
 }
