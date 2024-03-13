@@ -7,14 +7,20 @@
     color: #88C558;
 }
 
+.stepTwoInstructionswrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .stepTwoone{
-    margin-top: 5%;
     font-size: 150%;
     font-weight: bolder;
+    text-align: left;
 }
 
 .stepTwotwo{
-    margin-top: 5%;
+    margin-top: 3%;
     font-size: 150%;
     font-weight: bolder;
+    text-align: left;
 }
