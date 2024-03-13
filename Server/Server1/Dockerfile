@@ -1,10 +1,7 @@
-#  docker build -t serverone . 
-#  docker run -d --network mynetwork --name serverone -p 4000:22 serverone
-
-
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y openssh-server grep man-db nmap
+
 
 RUN rm /etc/legal
 RUN rm /etc/update-motd.d/00-header
@@ -23,5 +20,5 @@ COPY ./Training /home/cyber/
 
 RUN echo "cyber:cyber" | chpasswd
 
-EXPOSE 1000
-CMD ["/usr/sbin/sshd", "-D", "-p", "1000"]
+EXPOSE 4000
+CMD ["/usr/sbin/sshd", "-D", "-p", "4000"]
