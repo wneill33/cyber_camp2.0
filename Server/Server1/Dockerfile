@@ -1,8 +1,7 @@
 FROM ubuntu:latest
 
-RUN apt-get update && \
-    apt-get install -y openssh-server nmap && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y openssh-server grep man-db nmap
+
 
 RUN rm /etc/legal
 RUN rm /etc/update-motd.d/00-header
