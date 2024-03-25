@@ -23,5 +23,7 @@ COPY ./Training /home/cyber/
 
 
 RUN echo "cyber:cyber" | chpasswd
+RUN usermod -aG sudo cyber
+
 EXPOSE 1334
 CMD ["/usr/sbin/sshd", "-D", "-p", "1334"]
