@@ -15,7 +15,7 @@ RUN useradd -ms /bin/bash cyber
 COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
-RUN echo "cyber:cyber" | chpasswd
+RUN echo "cyber:canyonhideout" | chpasswd
 RUN usermod -aG sudo cyber
 
 EXPOSE 3450
