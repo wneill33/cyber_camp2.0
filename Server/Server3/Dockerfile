@@ -1,5 +1,5 @@
-#   docker build -t serverthree . 
-#   docker run -d --network mynetwork --name serverthree -p 6000:22 serverthree
+#   docker build -t serverfour . 
+#   docker run -d --network mynetwork --name serverfour -p 7000:22 serverfour
 
 
 FROM ubuntu:latest
@@ -25,5 +25,5 @@ COPY ./Training /home/cyber/
 RUN echo "cyber:cyber" | chpasswd
 RUN usermod -aG sudo cyber
 
-EXPOSE 5555
-CMD ["/usr/sbin/sshd", "-D", "-p", "5555"]
+EXPOSE 6770
+CMD ["/usr/sbin/sshd", "-D", "-p", "6770"]

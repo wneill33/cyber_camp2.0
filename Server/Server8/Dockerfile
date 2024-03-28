@@ -1,5 +1,5 @@
-#   docker build -t servereight . 
-#   docker run -d --network cyber_camp_servers --name servereight -p 7000:22 servereight
+#   docker build -t serverfour . 
+#   docker run -d --network mynetwork --name serverfour -p 7000:22 serverfour
 
 
 FROM ubuntu:latest
@@ -25,5 +25,5 @@ COPY ./Training /home/cyber/
 RUN echo "cyber:cyber" | chpasswd
 RUN usermod -aG sudo cyber
 
-EXPOSE 3355
-CMD ["/usr/sbin/sshd", "-D", "-p", "3355"]
+EXPOSE 6771
+CMD ["/usr/sbin/sshd", "-D", "-p", "6771"]
