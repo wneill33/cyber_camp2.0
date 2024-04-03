@@ -11,11 +11,6 @@ import StepSeven from "./../../base/Steps/Step7/StepSeven";
 import StepEight from "./../../base/Steps/Step8/StepEight";
 import StepNine from "./../../base/Steps/Step9/StepNine";
 import StepTen from "./../../base/Steps/Step10/StepTen";
-import StepEleven from "./../../base/Steps/Step11/StepEleven";
-import StepTwelve from "./../../base/Steps/Step12/StepTwelve";
-import StepThirteen from "./../../base/Steps/Step13/StepThirteen";
-import StepFourteen from "./../../base/Steps/Step14/StepFourteen";
-import StepFifteen from "./../../base/Steps/Step15/StepFifteen";
 import ConfigureServer from "./../../base/ConfigureServer/ConfigureServer";
 
 const PanelViewContent = ({
