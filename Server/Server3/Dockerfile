@@ -22,7 +22,7 @@ COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
 
-RUN echo "cyber:oasis" | chpasswd
+RUN echo "cyber:canyonhideout" | chpasswd
 RUN usermod -aG sudo cyber
 
 EXPOSE 6770

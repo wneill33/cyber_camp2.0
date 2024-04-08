@@ -18,7 +18,7 @@ RUN useradd -ms /bin/bash cyber
 COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
-RUN echo "cyber:gangplanningheist" | chpasswd
+RUN echo "cyber:cyber" | chpasswd
 RUN usermod -aG sudo cyber
 
 EXPOSE 4000

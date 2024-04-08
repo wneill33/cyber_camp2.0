@@ -22,6 +22,6 @@ COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
 
-RUN echo "cyber:cyber" | chpasswd
+RUN echo "cyber:owenquickdrawokeefe" | chpasswd
 EXPOSE 1111
 CMD ["/usr/sbin/sshd", "-D", "-p", "1111"]

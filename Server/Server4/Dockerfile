@@ -22,7 +22,7 @@ COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
 
-RUN echo "cyber:thebank" | chpasswd
+RUN echo "cyber:oasis" | chpasswd
 RUN usermod -aG sudo cyber
 
 EXPOSE 5555

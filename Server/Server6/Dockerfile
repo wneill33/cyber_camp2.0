@@ -22,7 +22,7 @@ COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
 
-RUN echo "cyber:three" | chpasswd
+RUN echo "cyber:jailcell" | chpasswd
 RUN usermod -aG sudo cyber
 
 EXPOSE 8850
