@@ -1,0 +1,8 @@
+.stepFourMainWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    color: white;  
+    font-family: Courier New, monospace;
+    color: #88C558;
+}
