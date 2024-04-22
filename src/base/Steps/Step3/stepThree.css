@@ -1,22 +1,21 @@
-.stepThreeMainWrapper{
-    display: flex;
-    flex-direction: row;
-}
-
 .stepThreeWrapper{
     display: flex;
     flex-direction: column;
-    text-align: left;
+    align-items: start;
+    color: white;  
+    font-family: Courier New, monospace;
+    color: #88C558;
 }
 
 .stepThreeone{
-    margin-top: 5%;
     font-size: 150%;
     font-weight: bolder;
+    text-align: left;
 }
 
 .stepThreetwo{
-    margin-top: 5%;
+    margin-top: 3%;
     font-size: 150%;
     font-weight: bolder;
+    text-align: left;
 }

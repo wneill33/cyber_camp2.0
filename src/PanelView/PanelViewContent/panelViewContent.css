@@ -18,9 +18,9 @@
 
 .panelViewContentPasswordMainWrapper{
     height: 10%;
-    width: 100%;
+    width: 90%;
     border-radius: 15px;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 .inputBoxWrapper{
@@ -56,7 +56,7 @@
     border-radius: 15px;
     font-family: Courier New, monospace;
     font-weight: bold;
-    font-size: 100%;
+    font-size: 75%;
     margin-left: 2%;
 }
 
