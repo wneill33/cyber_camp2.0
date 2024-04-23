@@ -42,7 +42,7 @@ cd ..
 
 Write-Host "Building server seven part two..."
 cd .\Server7_2
-docker build -t serverseven2 .
+docker build -t traincar .
 cd ..
 
 
@@ -86,7 +86,7 @@ Write-Host "Running server Seven container..."
 docker run -d --network cyber_camp_servers --name serverseven -p 3355:3355 serverseven
 
 Write-Host "Running server Seven container part two..."
-docker run -d --network cyber_camp_servers --name serverseven2 -p 4455:4455 serverseven2 # TODO *****  change this port number  *****
+docker run -d --network cyber_camp_servers --name traincar -p 4455:4455 traincar # part two
 
 Write-Host "Running server Eight container..."
 docker run -d --network cyber_camp_servers --name servereight -p 6771:6771 servereight
