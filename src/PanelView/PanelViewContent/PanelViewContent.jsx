@@ -87,6 +87,7 @@ const PanelViewContent = ({
         {currentLevel !== 10 && (
           <div className="panelViewContentPasswordMainWrapper">
             <input
+              autoFocus
               className="inputBoxWrapper"
               onChange={handleChangePassword}
               value={userPassword}
