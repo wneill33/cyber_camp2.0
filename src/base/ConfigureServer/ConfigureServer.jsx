@@ -25,7 +25,10 @@ const ConfigureServer = () => {
         your mettle like never before? Only time will tell as you journey ever
         onward along the dusty trail.
       </div>
-      <div className="stepZerotwo">Hint: ssh cyber@0.0.0.0 -p 4000</div>
+      <div className="stepZerotwo">
+        To start your journey open a terminal and enter: ssh cyber@0.0.0.0 -p
+        4000
+      </div>
       <div className="stepZerotwo">Password: cyber</div>
     </div>
   );
