@@ -67,83 +67,42 @@ const PanelViewContent = ({
   };
 
 
+
   return (
     <div className="panelViewContainer">
       <div className="panelViewContentMainWrapper">
         <div className="panelViewStepsWrapper">
-          {currentLevel === 0 && (
-            <div>
-              <ConfigureServer />
-            </div>
-          )}
-          {currentLevel === 1 && (
-            <div>
-              <StepOne />
-            </div>
-          )}
-          {currentLevel === 2 && (
-            <div>
-              <StepTwo />
-            </div>
-          )}
-          {currentLevel === 3 && (
-            <div>
-              <StepThree />
-            </div>
-          )}
-          {currentLevel === 4 && (
-            <div>
-              <StepFour />
-            </div>
-          )}
-          {currentLevel === 5 && (
-            <div>
-              <StepFive />
-            </div>
-          )}
-          {currentLevel === 6 && (
-            <div>
-              <StepSix />
-            </div>
-          )}
-          {currentLevel === 7 && (
-            <div>
-              <StepSeven />
-            </div>
-          )}
-          {currentLevel === 8 && (
-            <div>
-              <StepEight />
-            </div>
-          )}
-          {currentLevel === 9 && (
-            <div>
-              <StepNine />
-            </div>
-          )}
-          {currentLevel === 10 && (
-            <div>
-              <StepTen />
-            </div>
-          )}
+          {currentLevel === 0 && <ConfigureServer />}
+          {currentLevel === 1 && <StepOne />}
+          {currentLevel === 2 && <StepTwo />}
+          {currentLevel === 3 && <StepThree />}
+          {currentLevel === 4 && <StepFour />}
+          {currentLevel === 5 && <StepFive />}
+          {currentLevel === 6 && <StepSix />}
+          {currentLevel === 7 && <StepSeven />}
+          {currentLevel === 8 && <StepEight />}
+          {currentLevel === 9 && <StepNine />}
+          {currentLevel === 10 && <StepTen />}
         </div>
-        <div className="panelViewContentPasswordMainWrapper">
-          <input
-            className="inputBoxWrapper"
-            onChange={handleChangePassword}
-            value={userPassword}
-            type="text"
-          />
-          <button className="button1" onClick={handleCheckpassword}>
-            Submit
-          </button>
-          <button className="testButtonWrapper" onClick={testhandle}>Test</button>
-          {/* here */}
-          <button className="testButtonWrapper" onClick={handleTestSuccessMessage}>TOAST TESTER</button>
-          {successMessage && <div className="successMessage">{successMessage}</div>}
-        </div>
+        {currentLevel !== 10 && (
+          <div className="panelViewContentPasswordMainWrapper">
+            <input
+              className="inputBoxWrapper"
+              onChange={handleChangePassword}
+              value={userPassword}
+              type="text"
+            />
+            <button className="button1" onClick={handleCheckpassword}>
+              Submit
+            </button>
+            <button className="testButtonWrapper" onClick={testhandle}>Test</button>
+            <button className="testButtonWrapper" onClick={handleTestSuccessMessage}>TOAST TESTER</button>
+            {successMessage && <div className="successMessage">{successMessage}</div>}
+          </div>
+        )}
       </div>
     </div>
   );
 };
+
 export default PanelViewContent;
