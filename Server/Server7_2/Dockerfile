@@ -1,5 +1,7 @@
-#   docker build -t serverfour . 
-#   docker run -d --network mynetwork --name serverfour -p 7000:22 serverfour
+#   docker build -t servereight . 
+#   docker run -d --network cyber_camp_servers --name servereight -p 7000:22 servereight
+
+
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y openssh-server grep man-db nmap sudo
@@ -14,11 +16,14 @@ RUN chmod 0755 /run/sshd
 RUN chown root:root /run/sshd
 RUN useradd -ms /bin/bash cyber
 
+
+
 COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
-RUN echo "cyber:vault2" | chpasswd
+
+RUN echo "cyber:trainheist" | chpasswd
 RUN usermod -aG sudo cyber
 
-EXPOSE 9999
-CMD ["/usr/sbin/sshd", "-D", "-p", "9999"]
+EXPOSE 4455
+CMD ["/usr/sbin/sshd", "-D", "-p", "4455"]

@@ -1,6 +1,7 @@
-#   docker build -t serverfour . 
-#   docker run -d --network mynetwork --name serverfour -p 7000:22 serverfour
-
+#   oringinal -server 3  
+#   docker build -t serverthree . 
+#   docker run -d --network mynetwork --name serverfour -p 6770:22 serverfour
+# password 'canyonhideout'
 
 FROM ubuntu:latest
 

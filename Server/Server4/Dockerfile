@@ -1,5 +1,5 @@
-#   docker build -t serverthree . 
-#   docker run -d --network mynetwork --name serverthree -p 6000:22 serverthree
+#   docker build -t serverfour . 
+#   docker run -d --network mynetwork --name serverfour -p 5555:22 serverthree
 
 
 FROM ubuntu:latest
