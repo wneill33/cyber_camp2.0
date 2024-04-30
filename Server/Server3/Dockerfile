@@ -1,10 +1,11 @@
+#   oringinal -server 3  
 #   docker build -t serverthree . 
-#   docker run -d --network mynetwork --name serverthree -p 6000:22 serverthree
-
+#   docker run -d --network mynetwork --name serverfour -p 6770:22 serverfour
+# password 'canyonhideout'
 
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y openssh-server grep man-db nmap
+RUN apt-get update && apt-get install -y openssh-server grep man-db nmap sudo
 
 RUN rm /etc/legal
 RUN rm /etc/update-motd.d/00-header
@@ -22,6 +23,8 @@ COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
 
-RUN echo "cyber:cyber" | chpasswd
-EXPOSE 5555
-CMD ["/usr/sbin/sshd", "-D", "-p", "5555"]
+RUN echo "cyber:canyonhideout" | chpasswd
+RUN usermod -aG sudo cyber
+
+EXPOSE 6770
+CMD ["/usr/sbin/sshd", "-D", "-p", "6770"]

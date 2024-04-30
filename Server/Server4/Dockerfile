@@ -1,5 +1,5 @@
 #   docker build -t serverfour . 
-#   docker run -d --network mynetwork --name serverfour -p 7000:22 serverfour
+#   docker run -d --network mynetwork --name serverfour -p 5555:22 serverthree
 
 
 FROM ubuntu:latest
@@ -22,6 +22,8 @@ COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
 
-RUN echo "cyber:cyber" | chpasswd
-EXPOSE 1334
-CMD ["/usr/sbin/sshd", "-D", "-p", "1334"]
+RUN echo "cyber:oasis" | chpasswd
+RUN usermod -aG sudo cyber
+
+EXPOSE 5555
+CMD ["/usr/sbin/sshd", "-D", "-p", "5555"]

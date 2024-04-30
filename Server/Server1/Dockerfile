@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y openssh-server grep man-db nmap
+RUN apt-get update && apt-get install -y openssh-server grep man-db nmap sudo
 
 
 RUN rm /etc/legal
@@ -19,6 +19,7 @@ COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
 RUN echo "cyber:cyber" | chpasswd
+RUN usermod -aG sudo cyber
 
 EXPOSE 4000
 CMD ["/usr/sbin/sshd", "-D", "-p", "4000"]

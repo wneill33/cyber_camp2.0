@@ -1,10 +1,10 @@
-#   docker build -t serverfour . 
-#   docker run -d --network mynetwork --name serverfour -p 7000:22 serverfour
+#   docker build -t serverfive . 
+#   docker run -d --network mynetwork --name serverfive -p 7000:22 serverfive
 
 
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y openssh-server grep man-db nmap
+RUN apt-get update && apt-get install -y openssh-server grep man-db nmap sudo
 
 RUN rm /etc/legal
 RUN rm /etc/update-motd.d/00-header
@@ -22,6 +22,8 @@ COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
 
-RUN echo "cyber:cyber" | chpasswd
-EXPOSE 6770
-CMD ["/usr/sbin/sshd", "-D", "-p", "6770"]
+RUN echo "cyber:jailcell" | chpasswd
+RUN usermod -aG sudo cyber
+
+EXPOSE 8850
+CMD ["/usr/sbin/sshd", "-D", "-p", "8850"]

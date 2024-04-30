@@ -1,5 +1,3 @@
-Write-Host "Docker login"
-docker login
 
 Write-Host "creating network"
 
@@ -37,10 +35,16 @@ cd .\Server6
 docker build -t serversix .
 cd ..
 
-Write-Host "Building server seven..."
+Write-Host "Building server seven part one..."
 cd .\Server7
 docker build -t serverseven .
 cd ..
+
+Write-Host "Building server seven part two..."
+cd .\Server7_2
+docker build -t traincar .
+cd ..
+
 
 Write-Host "Building server eight..."
 cd .\Server8
@@ -67,22 +71,25 @@ Write-Host "Running server Two container..."
 docker run -d --network cyber_camp_servers --name servertwo -p 3450:3450 servertwo
 
 Write-Host "Running server Three container..."
-docker run -d --network cyber_camp_servers --name serverthree -p 5555:5555 serverthree
+docker run -d --network cyber_camp_servers --name serverthree -p 6770:6770 serverthree
 
 Write-Host "Running server Four container..."
-docker run -d --network cyber_camp_servers --name serverfour -p 1334:1334 serverfour
+docker run -d --network cyber_camp_servers --name serverfour -p 5555:5555 serverfour
 
 Write-Host "Running server Five container..."
-docker run -d --network cyber_camp_servers --name serverfive -p 8850:8850 serverfive
+docker run -d --network cyber_camp_servers --name serverfive -p 1334:1334 serverfive
 
 Write-Host "Running server Six container..."
-docker run -d --network cyber_camp_servers --name serversix -p 6770:6770 serversix
+docker run -d --network cyber_camp_servers --name serversix -p 8850:8850 serversix
 
 Write-Host "Running server Seven container..."
-docker run -d --network cyber_camp_servers --name serverseven -p 6771:6771 serverseven
+docker run -d --network cyber_camp_servers --name serverseven -p 3355:3355 serverseven
+
+Write-Host "Running server Seven container part two..."
+docker run -d --network cyber_camp_servers --name traincar -p 4455:4455 traincar # part two
 
 Write-Host "Running server Eight container..."
-docker run -d --network cyber_camp_servers --name servereight -p 3355:3355 servereight
+docker run -d --network cyber_camp_servers --name servereight -p 6771:6771 servereight
 
 Write-Host "Running server Nine container..."
 docker run -d --network cyber_camp_servers --name servernine -p 9999:9999 servernine

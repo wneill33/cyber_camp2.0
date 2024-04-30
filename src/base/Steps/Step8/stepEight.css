@@ -1,8 +1,21 @@
-.stepEightMainWrapper{
+.stepEightWrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
     color: white;  
     font-family: Courier New, monospace;
     color: #88C558;
+    text-align: left;
+}
+
+.stepEightone{
+    margin-top: 5%;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+.stepEighttwo{
+    margin-top: 5%;
+    font-size: 150%;
+    font-weight: bolder;
 }

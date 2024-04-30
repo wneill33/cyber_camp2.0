@@ -1,10 +1,10 @@
-#   docker build -t serverfour . 
-#   docker run -d --network mynetwork --name serverfour -p 7000:22 serverfour
+#   docker build -t servereight . 
+#   docker run -d --network cyber_camp_servers --name servereight -p 7000:22 servereight
 
 
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y openssh-server grep man-db nmap
+RUN apt-get update && apt-get install -y openssh-server grep man-db nmap sudo
 
 RUN rm /etc/legal
 RUN rm /etc/update-motd.d/00-header
@@ -22,6 +22,8 @@ COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
 
-RUN echo "cyber:cyber" | chpasswd
-EXPOSE 6771
-CMD ["/usr/sbin/sshd", "-D", "-p", "6771"]
+RUN echo "cyber:three" | chpasswd
+RUN usermod -aG sudo cyber
+
+EXPOSE 3355
+CMD ["/usr/sbin/sshd", "-D", "-p", "3355"]

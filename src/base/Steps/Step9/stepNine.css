@@ -1,8 +1,21 @@
-.stepNineMainWrapper{
+.stepNineWrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
     color: white;  
     font-family: Courier New, monospace;
     color: #88C558;
+    text-align: left;
+}
+
+.stepNineone{
+    margin-top: 5%;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+.stepNinetwo{
+    margin-top: 5%;
+    font-size: 150%;
+    font-weight: bolder;
 }
