@@ -5,17 +5,17 @@
     color: white;  
     font-family: Courier New, monospace;
     color: #88C558;
-    text-align: left;
 }
 
 .stepThreeone{
-    margin-top: 5%;
     font-size: 150%;
     font-weight: bolder;
+    text-align: left;
 }
 
 .stepThreetwo{
-    margin-top: 5%;
+    margin-top: 3%;
     font-size: 150%;
     font-weight: bolder;
+    text-align: left;
 }
