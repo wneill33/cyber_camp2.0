@@ -16,16 +16,16 @@ const PanelView = ({ Content }) => {
   const [allowedLevel, setAllowedLevel] = useState(null);
 
   const object_password = {
-    level1: "one",
-    level2: "two",
-    level3: "three",
-    level4: "four",
-    level5: "five",
-    level6: "six",
-    level7: "seven",
-    level8: "eight",
-    level9: "nine",
-    level10: "ten",
+    level1: "gangplanningheist",
+    level2: "canyonhideout",
+    level3: "oasis",
+    level4: "thebank",
+    level5: "jailcell",
+    level6: "three",
+    level7: "access",
+    level8: "cyber",
+    level9: "vault2",
+    level10: "owenquickdrawokeefe",
   };
 
   useEffect(() => {

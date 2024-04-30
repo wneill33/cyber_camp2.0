@@ -42,7 +42,7 @@ cd ..
 
 Write-Host "Building server seven part two..."
 cd .\Server7_2
-docker build -t traincar .
+docker build -t serverseventwo .
 cd ..
 
 
@@ -64,38 +64,38 @@ cd ..
 
 cd .\Scripts
 
-Write-Host "Running serverone container..."
-docker run -d --network cyber_camp_servers --name serverone -p 4000:4000 serverone
+Write-Host "Running deadwoodsaloon container..."
+docker run -d --network cyber_camp_servers --name deadwoodsaloon -p 4000:4000 serverone
 
 Write-Host "Running server Two container..."
-docker run -d --network cyber_camp_servers --name servertwo -p 3450:3450 servertwo
+docker run -d --network cyber_camp_servers --name sheriffoffice -p 3450:3450 servertwo
 
 Write-Host "Running server Three container..."
-docker run -d --network cyber_camp_servers --name serverthree -p 6770:6770 serverthree
+docker run -d --network cyber_camp_servers --name desertoasis -p 6770:6770 serverthree
 
 Write-Host "Running server Four container..."
-docker run -d --network cyber_camp_servers --name serverfour -p 5555:5555 serverfour
+docker run -d --network cyber_camp_servers --name canyonhideout -p 5555:5555 serverfour
 
 Write-Host "Running server Five container..."
-docker run -d --network cyber_camp_servers --name serverfive -p 1334:1334 serverfive
+docker run -d --network cyber_camp_servers --name bankrobbery -p 1334:1334 serverfive
 
 Write-Host "Running server Six container..."
-docker run -d --network cyber_camp_servers --name serversix -p 8850:8850 serversix
+docker run -d --network cyber_camp_servers --name ghosttown -p 8850:8850 serversix
 
 Write-Host "Running server Seven container..."
-docker run -d --network cyber_camp_servers --name serverseven -p 3355:3355 serverseven
+docker run -d --network cyber_camp_servers --name trainheist -p 3355:3355 serverseven
 
 Write-Host "Running server Seven container part two..."
-docker run -d --network cyber_camp_servers --name traincar -p 4455:4455 traincar # part two
+docker run -d --network cyber_camp_servers --name traincar -p 4455:4455 serverseventwo # part two
 
 Write-Host "Running server Eight container..."
-docker run -d --network cyber_camp_servers --name servereight -p 6771:6771 servereight
+docker run -d --network cyber_camp_servers --name goldrush -p 6771:6771 servereight
 
 Write-Host "Running server Nine container..."
-docker run -d --network cyber_camp_servers --name servernine -p 9999:9999 servernine
+docker run -d --network cyber_camp_servers --name finalshowdown -p 9999:9999 servernine
 
 Write-Host "Running server Ten container..."
-docker run -d --network cyber_camp_servers --name serverten -p 1111:1111 serverten
+docker run -d --network cyber_camp_servers --name legend -p 1111:1111 serverten
 
 Write-Host "******************** On docker network cyber_camp_servers******************************"
 Write-Host "***************************************************************************************"

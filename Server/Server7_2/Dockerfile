@@ -22,7 +22,7 @@ COPY ./MotdFile.txt ./etc/motd
 COPY ./Training /home/cyber/
 
 
-RUN echo "cyber:trainheist" | chpasswd
+RUN echo "cyber:access" | chpasswd
 RUN usermod -aG sudo cyber
 
 EXPOSE 4455

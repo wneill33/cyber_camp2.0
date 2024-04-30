@@ -5,6 +5,7 @@ const StepTwo = () => {
     <div className="stepTwoWrapper">
       <h1>Level 2: The Sheriff's Office</h1>
       <div className="stepTwoInstructionswrapper">
+        <div className="stepTwoone"> IP: sheriffoffice Port: 3450 </div>
         <div className="stepTwoone">
           Word spreads fast in Deadwood, and soon you catch wind of a notorious
           outlaw planning something. The sheriff needs your help to gather
