@@ -38,6 +38,7 @@ const PanelViewContent = ({
   }, [currentLevel]);
 
   const handleNextButton = () => {
+    setUserPassword(null);
     setCurrentLevel(currentLevel + 1);
   };
   const startLevel = () => {
