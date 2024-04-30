@@ -1,6 +1,7 @@
-# Create React App
+# Cyber Camp 2.0
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+This is a React.js application for beginner cyber security training. This training game consists of ten levels that the user will navigate through and find the password for the next level. The user will access the levels by SSH into the given ip on the web application. 
+The levels are currently docker containers that host linux(ubuntu) servers that are hosted on a local machine. 
 
 ## Deploy Your Own
 
@@ -29,3 +30,8 @@ Launches the test runner in the interactive watch mode. See the section about [r
 Builds the app for production to the `build` folder.
 
 It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+
+## Server Start Up
+
+Enusre that docker is install and running on local machine. navigate to \cyber_camp2.0\Server\Scripts and run ".\start_servers_and_network.ps1"
+This script will build and run all docker containers. To delete all servers run the script ".\delete_servers_and_network.ps1"
