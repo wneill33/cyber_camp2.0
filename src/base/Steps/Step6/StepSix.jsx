@@ -4,6 +4,7 @@ const StepSix = () => {
     <div className="stepSixWrapper">
       <h1>Level 6: The Ghost Town</h1>
       <div className="stepSixInstructionswrapper">
+        <div className="stepSixone">IP: ghosttown Port: 8850</div>
         <div className="stepSixone">
           With the outlaws behind bars, you set out to explore a nearby ghost
           town rumored to hold hidden treasures. But beware, for the town is

@@ -4,6 +4,7 @@ const StepEight = () => {
     <div className="stepEightWrapper">
       <h1>Level 8: The Gold Rush</h1>
       <div className="stepEightInstructionswrapper">
+        <div className="stepEightone">IP: goldrush Port: 6771</div>
         <div className="stepEightone">
           Though you found the gold within the Ghost Town, those spirits are
           still out for anybody who threatens to take their treasure. Your

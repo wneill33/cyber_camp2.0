@@ -18,55 +18,31 @@ const PanelViewContent = ({
   setAllowedLevel,
   object_password,
   allowedLevel,
+  setCurrentLevel,
 }) => {
   const [userPassword, setUserPassword] = useState(null);
-  const [successMessage, setSuccessMessage] = useState("");
   const handleChangePassword = (e) => {
     setUserPassword(e.target.value);
   };
-  // const handleCheckpassword = () => {
-  //   if (currentLevel === allowedLevel) {
-  //     if (userPassword === object_password[`level${currentLevel}`]) {
-  //       if (allowedLevel != 10) {
-  //         setAllowedLevel(allowedLevel + 1);
-  //       }
-  //     }
-  //   }
-  // };
-
-
-  // NEW SUCCES MESSAGE FOR USER TEST
   const handleCheckpassword = () => {
     if (currentLevel === allowedLevel) {
       if (userPassword === object_password[`level${currentLevel}`]) {
-        setSuccessMessage("Correct answer! Moving to the next level...");
-        setTimeout(() => setSuccessMessage(""), 3000); 
-        setTimeout(() => {
-          if (allowedLevel != 15) {
-            setAllowedLevel(allowedLevel + 1);
-          }
-        }, 2000);
-      } else {
-        setSuccessMessage("Incorrect answer. Please try again.");
-        setTimeout(() => setSuccessMessage(""), 3000);
+        if (allowedLevel != 10) {
+          setAllowedLevel(allowedLevel + 1);
+        }
       }
     }
   };
+  useEffect(() => {
+    setUserPassword(null);
+  }, [currentLevel]);
 
-  const testhandle = () => {
-    console.log("current", currentLevel);
-    console.log("allowed", allowedLevel);
-    console.log("userpassword", userPassword);
-    console.log("objectpassword", object_password[`level${currentLevel}`]);
+  const handleNextButton = () => {
+    setCurrentLevel(currentLevel + 1);
   };
-
-  // New function to test the success message appearance
-  const handleTestSuccessMessage = () => {
-    setSuccessMessage("This is a test success message!");
-    setTimeout(() => setSuccessMessage(""), 3000);
+  const startLevel = () => {
+    setCurrentLevel(1);
   };
-
-
 
   return (
     <div className="panelViewContainer">
@@ -84,22 +60,47 @@ const PanelViewContent = ({
           {currentLevel === 9 && <StepNine />}
           {currentLevel === 10 && <StepTen />}
         </div>
-        {currentLevel !== 10 && (
-          <div className="panelViewContentPasswordMainWrapper">
-            <input
-              autoFocus
-              className="inputBoxWrapper"
-              onChange={handleChangePassword}
-              value={userPassword}
-              type="text"
-            />
-            <button className="button1" onClick={handleCheckpassword}>
-              Submit
-            </button>
-            <button className="testButtonWrapper" onClick={testhandle}>Test</button>
-            <button className="testButtonWrapper" onClick={handleTestSuccessMessage}>TOAST TESTER</button>
-            {successMessage && <div className="successMessage">{successMessage}</div>}
-          </div>
+        {currentLevel !== 10 && currentLevel !== 0 ? (
+          <>
+            {currentLevel >= allowedLevel ? (
+              <div className="panelViewContentPasswordMainWrapper">
+                <input
+                  autoFocus
+                  className="inputBoxWrapper"
+                  onChange={handleChangePassword}
+                  value={userPassword}
+                  type="text"
+                />
+                <button className="button1" onClick={handleCheckpassword}>
+                  Submit
+                </button>
+              </div>
+            ) : (
+              <div className="nextlevelWrapper">
+                <div className="passwordtext">
+                  Level passed! The password to access the next level is :{" "}
+                  {object_password[`level${currentLevel}`]}
+                </div>
+                <button className="button1" onClick={() => handleNextButton()}>
+                  Next Level
+                </button>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            {currentLevel !== 0 ? (
+              <div className="finalmessage">
+                Congrats you have beat the game!
+              </div>
+            ) : (
+              <div>
+                <button className="button1" onClick={() => startLevel()}>
+                  Start Journey
+                </button>
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>

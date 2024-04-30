@@ -26,10 +26,13 @@ const ConfigureServer = () => {
         onward along the dusty trail.
       </div>
       <div className="stepZerotwo">
-        To start your journey open a terminal and enter: ssh cyber@0.0.0.0 -p
+        To start your journey open a terminal and enter: ssh cyber@localhost -p
         4000
       </div>
       <div className="stepZerotwo">Password: cyber</div>
+      <div className="stepZerotwo">
+        Once you have successfully accessed level one you can start your journey
+      </div>
     </div>
   );
 };
