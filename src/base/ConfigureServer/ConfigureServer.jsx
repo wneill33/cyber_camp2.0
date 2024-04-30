@@ -3,7 +3,7 @@ import "./configureServer.css";
 const ConfigureServer = () => {
   return (
     <div className="setUpServerWrapper">
-      <h1>Level: 0 The Dusky Trail </h1>
+      <h1>The Dusky Trail </h1>
       <div className="stepZeroone">
         The sun beat down mercilessly upon the arid landscape, casting long
         shadows across the rugged terrain. You find yourself on the dusty trail,

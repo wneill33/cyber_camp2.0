@@ -22,37 +22,37 @@ const SideBar = ({ currentLevel, allowedLevel, setCurrentLevel }) => {
     <div className="sideBarWrapperMain">
       <div className="sideBarStepWrapper">
         <div onClick={() => handleClick(0)} className="step">
-          Set up Server
+          Start
         </div>
         <div onClick={() => handleClick(1)} className="step">
-          Step 1
+          Level 1
         </div>
         <div onClick={() => handleClick(2)} className="step">
-          Step 2
+          Level 2
         </div>
         <div onClick={() => handleClick(3)} className="step">
-          Step 3
+          Level 3
         </div>
         <div onClick={() => handleClick(4)} className="step">
-          Step 4
+          Level 4
         </div>
         <div onClick={() => handleClick(5)} className="step">
-          Step 5
+          Level 5
         </div>
         <div onClick={() => handleClick(6)} className="step">
-          Step 6
+          Level 6
         </div>
         <div onClick={() => handleClick(7)} className="step">
-          Step 7
+          Level 7
         </div>
         <div onClick={() => handleClick(8)} className="step">
-          Step 8
+          Level 8
         </div>
         <div onClick={() => handleClick(9)} className="step">
-          Step 9
+          Level 9
         </div>
         <div onClick={() => handleClick(10)} className="step">
-          Step 10
+          Level 10
         </div>
       </div>
     </div>
