@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, signInWithGoogle, signInWithGithub } from "./../Firebase";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,7 @@ import { ReactComponent as Github } from "./Github.svg";
 
 import "./signIn.css";
 
+// eslint-disable-next-line
 const SignIn = ({ setSelectedPage }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

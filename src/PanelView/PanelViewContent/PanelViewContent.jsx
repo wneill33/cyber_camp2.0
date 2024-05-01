@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Alert } from 'react-bootstrap';
 
 import "./panelViewContent.css";
 import StepOne from "../../base/Steps/Step1/StepOne";
@@ -21,21 +22,42 @@ const PanelViewContent = ({
   setCurrentLevel,
 }) => {
   const [userPassword, setUserPassword] = useState(null);
+  const [showError, setShowError] = useState(false); 
+
   const handleChangePassword = (e) => {
     setUserPassword(e.target.value);
+    setShowError(false);
   };
-  const handleCheckpassword = () => {
-    if (currentLevel === allowedLevel) {
-      if (userPassword === object_password[`level${currentLevel}`]) {
-        if (allowedLevel != 10) {
-          setAllowedLevel(allowedLevel + 1);
+
+    const handleCheckpassword = (e) => {
+    if (e.type === 'click' || e.key === 'Enter') {
+      if (currentLevel === allowedLevel) {
+        if (userPassword === object_password[`level${currentLevel}`]) {
+          // eslint-disable-next-line
+          if (allowedLevel != 10) {
+            setAllowedLevel(allowedLevel + 1);
+            setUserPassword(null);
+          }
+        } else {
+          setShowError(true);
         }
       }
     }
   };
+
   useEffect(() => {
     setUserPassword(null);
   }, [currentLevel]);
+
+  useEffect(() => {
+    let timeoutId;
+    if (showError) {
+      timeoutId = setTimeout(() => {
+        setShowError(false);
+      }, 5000);
+    }
+    return () => clearTimeout(timeoutId);
+  }, [showError]);
 
   const handleNextButton = () => {
     setUserPassword(null);
@@ -71,10 +93,16 @@ const PanelViewContent = ({
                   onChange={handleChangePassword}
                   value={userPassword}
                   type="text"
+                  onKeyDown={handleCheckpassword}
                 />
-                <button className="button1" onClick={handleCheckpassword}>
+                <button className="button1" onClick={handleCheckpassword} auto>
                   Submit
                 </button>
+                {showError && (
+                  <div className="alertMessage">
+                    <Alert variant="danger">Incorrect Password! Try again.</Alert>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="nextlevelWrapper">
