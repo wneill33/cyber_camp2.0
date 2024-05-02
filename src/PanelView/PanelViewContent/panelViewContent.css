@@ -9,16 +9,24 @@
     color: white;
     border-radius: 15px;
 }
+
 .passwordtext{
     color: #88C558;
     font-size: 200%;
-    
+    font-weight: bold;
+    font-family: Courier New, monospace;
+    border: 2pt dashed #88C558;
+    border-radius: 15px;
+    padding: 1%; 
+    margin-top: 1%;
 }
+
 .panelViewStepsWrapper{
     height: 100%;
     width: 100%;
     border-radius: 15px;
 }
+
 .nextlevelWrapper{
     display: flex;
     flex-direction: column;
@@ -50,7 +58,7 @@
     background: #89C559;
     border: none;
     height: 4vh;
-    width: 8vw;
+    width: 10vw;
     border-radius: 15px;
     font-family: Courier New, monospace;
     font-weight: bold;
@@ -59,6 +67,23 @@
 }
 
 .button1:hover {
+    filter: brightness(150%); 
+    cursor: pointer;
+}
+
+.startJourneyButton {
+    background: #89C559;
+    border: none;
+    height: 4vh;
+    width: 10vw;
+    border-radius: 15px;
+    font-family: Courier New, monospace;
+    font-weight: bold;
+    font-size: 100%;
+    margin-right: 5%;
+}
+
+.startJourneyButton:hover {
     filter: brightness(150%); 
     cursor: pointer;
 }

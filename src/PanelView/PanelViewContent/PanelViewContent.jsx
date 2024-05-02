@@ -107,7 +107,7 @@ const PanelViewContent = ({
             ) : (
               <div className="nextlevelWrapper">
                 <div className="passwordtext">
-                  Level passed! The password to access the next level is :{" "}
+                  Level passed! The password to access the next level is:{" "}
                   {object_password[`level${currentLevel}`]}
                 </div>
                 <button className="button1" onClick={() => handleNextButton()}>
@@ -124,7 +124,7 @@ const PanelViewContent = ({
               </div>
             ) : (
               <div>
-                <button className="button1" onClick={() => startLevel()}>
+                <button className="startJourneyButton" onClick={() => startLevel()}>
                   Start Journey
                 </button>
               </div>
