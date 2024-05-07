@@ -4,7 +4,7 @@ const StepSeven = () => {
     <div className="stepSevenWrapper">
       <h1>Level 7: The Train Heist</h1>
       <div className="stepSevenInstructionswrapper">
-        <div className="stepSevenone">IP:trainheist Port: 3355</div>
+        <div className="stepSevenone">IP: cyber@trainheist Port: 3355</div>
         <div className="stepSevenone">
           Riding the rails, you come face to face with a band of train robbers
           intent on looting the cargo. Your challenge: thwart the heist and

@@ -4,7 +4,7 @@ const StepFour = () => {
     <div className="stepFourWrapper">
       <h1>Level 4: The Canyon Hideout</h1>
       <div className="stepFourInstructionswrapper">
-        <div className="stepFourone">IP: canyonhideout Port: 5555</div>
+        <div className="stepFourone">IP: cyber@canyonhideout Port: 5555</div>
         <div className="stepFourone">
           Following a lead, you embark on a treacherous journey into the
           canyons, where the outlaw gang is rumored to have a hideout. Your
