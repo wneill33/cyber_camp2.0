@@ -2,18 +2,18 @@ import "./stepThree.css";
 const StepThree = () => {
   return (
     <div className="stepThreeWrapper">
-      <h1>Level 3: The Canyon Hideout</h1>
+      <h1>Level 3: The Desert Oasis</h1>
       <div className="stepThreeInstructionswrapper">
+        <div className="stepThreeone">IP: cyber@desertoasis Port: 6770 </div>
         <div className="stepThreeone">
-          Following a lead, you embark on a treacherous journey into the
-          canyons, where the outlaw gang is rumored to have a hideout. Your
-          challenge: navigate the rugged terrain while evading traps and
-          ambushes set by the outlaws. (When setting it up, you will use ls -a
-          to find their hidden hideout (folder) but they will have already left
-          when you get there.) Password is the location of where the bandits are
-          going.
+          Lost in the scorching desert, you stumble upon an oasis. But something
+          feels off... Your task: uncover an oasis and escape before you become
+          another victim of its curse. The password will be the name of the land
+          file you make.
         </div>
-        <div className="stepThreetwo">Hint: dir, cat, ls -a, man</div>
+        <div className="stepThreetwo">
+          Hint: dir, ls, cat, sudo, echo -e, Oasis.txt
+        </div>
       </div>
     </div>
   );

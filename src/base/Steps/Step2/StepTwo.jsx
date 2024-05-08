@@ -5,6 +5,7 @@ const StepTwo = () => {
     <div className="stepTwoWrapper">
       <h1>Level 2: The Sheriff's Office</h1>
       <div className="stepTwoInstructionswrapper">
+        <div className="stepTwoone"> IP: cyber@sheriffoffice Port: 3450 </div>
         <div className="stepTwoone">
           Word spreads fast in Deadwood, and soon you catch wind of a notorious
           outlaw planning something. The sheriff needs your help to gather
@@ -16,7 +17,6 @@ const StepTwo = () => {
         <div className="stepTwotwo">
           Hint: dir, ls, cat, man grep, grep -i "sample text" filename Step 2
         </div>
-        <div className="stepTwotwo">ip: cyber@servertwo -p 3450</div>
       </div>
     </div>
   );

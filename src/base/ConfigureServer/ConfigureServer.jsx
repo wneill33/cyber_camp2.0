@@ -3,7 +3,7 @@ import "./configureServer.css";
 const ConfigureServer = () => {
   return (
     <div className="setUpServerWrapper">
-      <h1>Level: 0 The Dusky Trail </h1>
+      <h1>The Dusky Trail </h1>
       <div className="stepZeroone">
         The sun beat down mercilessly upon the arid landscape, casting long
         shadows across the rugged terrain. You find yourself on the dusty trail,
@@ -25,8 +25,14 @@ const ConfigureServer = () => {
         your mettle like never before? Only time will tell as you journey ever
         onward along the dusty trail.
       </div>
-      <div className="stepZerotwo">Hint: ssh cyber@0.0.0.0 -p 4000</div>
+      <div className="stepZerotwo">
+        To start your journey open a terminal and enter: ssh cyber@localhost -p
+        4000
+      </div>
       <div className="stepZerotwo">Password: cyber</div>
+      <div className="stepZerotwo">
+        Once you have successfully accessed level one you can start your journey
+      </div>
     </div>
   );
 };
