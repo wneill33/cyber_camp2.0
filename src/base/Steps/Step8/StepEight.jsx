@@ -2,7 +2,7 @@ import "./stepEight.css";
 const StepEight = () => {
   return (
     <div className="stepEightWrapper">
-      <h1>Level 8: cyber@The Gold Rush</h1>
+      <h1>Level 8: The Gold Rush</h1>
       <div className="stepEightInstructionswrapper">
         <div className="stepEightone">IP: cyber@goldrush Port: 6771</div>
         <div className="stepEightone">
