@@ -15,7 +15,7 @@ const StepTwo = () => {
           name of a hideout being rumored by one of the regulars.
         </div>
         <div className="stepTwotwo">
-          Hint: dir, ls, cat, man grep, grep -i "sample text" filename
+          Hint: dir, ls, cat, man, grep
         </div>
       </div>
     </div>
