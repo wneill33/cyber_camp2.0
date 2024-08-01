@@ -3,13 +3,6 @@
 This is a React.js application for beginner cyber security training. This training game consists of ten levels that the user will navigate through and find the password for the next level. The user will access the levels by SSH into the given ip on the web application. 
 The levels are currently docker containers that host linux(ubuntu) servers that are hosted on a local machine. 
 
-## Deploy Your Own
-
-Deploy your own Create React App project with Vercel.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
-
-_Live Example: https://create-react-template.vercel.app/_
 
 ## Available Scripts
 
